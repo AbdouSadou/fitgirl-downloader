@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitGirl Easy Downloader Web
+
+A modern, frontend-only React (Next.js) web application designed to simplify the extraction and sequential downloading of game parts from `fitgirl-repacks.site` (targeting `fuckingfast.co` host links).
+
+## Features
+
+- **Automated Link Extraction:** Paste a FitGirl game URL and instantly extract all relevant multi-part links.
+- **Sequential Native Downloads:** Handoffs download tasks natively to your browser one by one, bypassing JavaScript RAM limitations.
+- **Intelligent Delays:** Integrates customized cooldown timers (10 seconds) between file hand-offs to prevent modern browsers from blocking rapid consecutive downloads.
+- **Beautiful UI:** Built with Tailwind CSS, Lucide React icons, seamless Dark/Light mode support, and an integrated activity log.
 
 ## Getting Started
 
-First, run the development server:
-
+1. **Install dependencies:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the development server:**
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+Since this app relies on client-side fetching with a fallback public CORS proxy (`corsproxy.io`) to scrape HTML, it is configured for a static export in `next.config.mjs` (`output: "export"`). 
 
-To learn more about Next.js, take a look at the following resources:
+To deploy (e.g., to GitHub Pages):
+```bash
+npm run build
+```
+This will generate an `out/` folder containing pure HTML, CSS, and JS that you can host absolutely anywhere with zero backend required.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Disclaimer
+This project is an independent tool built for educational purposes and personal convenience. This tool is created for educational purposes and ethical use only. Any misuse of this tool for malicious purposes is not condoned. The developers of this tool are not responsible for any illegal or unethical activities carried out using this tool.
+We do not host any files and only parse openly accessible URLs.
