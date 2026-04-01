@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FitGirl Easy Downloader Web",
-  description: "A frontend web app for fetching links.",
+  title: "FitGirl Downloader (fuckingfast.co)",
+  description: "A frontend web app for fetching links from FitGirl Repacks.",
 };
 
 export default function RootLayout({
