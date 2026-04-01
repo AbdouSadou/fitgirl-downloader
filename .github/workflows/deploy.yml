@@ -1,4 +1,4 @@
-name: Deploy fitgirl downloader to GitHub Pages
+name: Deploy fitgirl downloader to gitHub Pages
 
 on:
   push:
